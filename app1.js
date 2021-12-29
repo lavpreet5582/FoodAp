@@ -38,7 +38,8 @@ app.use("/api/plan", planRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/review', reviewRouter);
 app.use('/api/booking', bookingRouter);
-app.listen(8081, function () {
+const port = process.env.PORT||3000;
+app.listen(port, function () {
     console.log("server started");
 })
 // 404 page
